@@ -14,7 +14,8 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")  // Permitir acesso a todos os endpoints
-                        .allowedOrigins("http://localhost:4200")  // Origem permitida
+                        .allowedOrigins("http://localhost:4200", "https://frontend-ewave-18.vercel.app")
+
                         .allowedMethods("GET", "POST", "PUT", "DELETE")  // Métodos permitidos
                         .allowCredentials(true)
                         .allowedHeaders("Content-Type", "Authorization", "Cache-Control", "DNT", 
